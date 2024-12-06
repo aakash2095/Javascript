@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Switch statement 
+
+            let fruit = 'Apple';
+
+            switch(fruit) {
+            case 'banana':
+                document.write('Banana is Yellow');
+                break;
+            case 'Apple':
+                document.write('Apple is Red');
+                break;
+            case 'Grapes':
+                document.write('Grapes is Green');
+                break;
+            default:
+                document.write('You dont know the fruit');
+            }
+
+            document.write('<br><hr>')
+
+            var day=parseInt(prompt('ENTER DAY'));
+            var dayname;
+            
+            switch(day) {
+            case 0:
+                dayname='sunday';
+                break;
+            case 1:
+                dayname='monday';
+                break;
+            case 2:
+                dayname = "Tuesday";
+                break;
+            case 3:
+                dayname = "Wednesday";
+                break;
+            case 4:
+                dayname = "Thursday";
+                break;
+            case 5:
+                dayname = "Friday";
+                break;
+            case 6:
+                dayname = "Saturday";
+                break;
+            default:
+                dayname = "Invalid day";
+            }
+
+            document.write("Today is " + dayname);
+
+    </script>
+</body>
+</html>
