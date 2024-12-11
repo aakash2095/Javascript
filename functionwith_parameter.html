@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+        //function with one parameter
+        function fun_parameter(name){
+            document.write(name);
+        }
+        fun_parameter("javascript");
+        
+        document.write("<br> <br>")
+        //function with more than one parameter
+        function fun_parameter(x,y){
+            document.write(x + " " +y);
+        }
+        fun_parameter("Version",3.8);
+        fun_parameter("Version");       // If function argument is missing the value is Undefined
+        
+
+    </script>
+
+        <!-- function argument missing -->
+        <script>
+        // passing more values than parameter
+        document.write("<br> <br>")
+        document.write("Passing more values than parameter ")
+        document.write("<br> <br>")
+
+        //function with more than one parameter
+        function fun_parameter(x,y,z){
+            document.write("x: "+ x + ", " + "y: " + y +", "+ "z: "+z);
+        }
+        fun_parameter(2,4,6);
+                
+
+
+    </script>
+    </body>
+</html>

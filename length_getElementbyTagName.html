@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+  </head>
+  <body>
+    <h1>getElementsByTagName</h1>
+
+    <h1 id="frog">Many frogs glow in blue light, and it may be a secret, eerie
+      language</h1>
+    <p id="para">A survey of <q>hundreds of frogs in South America</q> shows
+      that far more <em>frogs</em> are
+      biofluorescent <q>than previously thought, researchers report</q> in a
+      preprint posted
+      July <b>28</b> at bioRxiv.org. <q>ghostly colors may have a role in the
+        frogs</q> communication
+      with members of the same species, the scientists say.</p>
+
+    <p>This is some regular text outside the blockquote.<q>ghostly colors may
+        have a role in the frogs</q> </p>
+
+    <script>
+    var result1 = document.getElementById("para")
+
+    var result2= result1.getElementsByTagName("q").length 
+
+    var result3= document.getElementsByTagName("q") 
+    
+    var result4 = result3.length
+    
+
+    
+    document.write(result1 +"<br>")
+    document.write(result2 +"<br>")
+    document.write(result4 +"<br>")
+
+    console.log(result1)
+    console.log(result2)
+    console.log(result4)
+
+    // for loop code 
+    console.log('For Loop ')
+    
+    for(i=0;i<result2;i++){
+      var res= document.getElementsByTagName("q")[i] 
+      console.log(res)
+    }
+
+  
+    
+
+
+  </script>
+  </body>
+</html>
