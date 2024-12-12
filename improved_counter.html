@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .counter-heading {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .counter-heading:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        input {
+            font-size: 18px;
+            text-align: center;
+            width: 80px;
+            padding: 5px;
+            border: 2px solid #90caf9;
+            border-radius: 5px;
+            outline: none;
+            margin: 10px 0;
+        }
+        button {
+            font-size: 16px;
+            padding: 8px 12px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        #increase {
+            background-color: #43a047;
+        }
+        #increase:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+        #decrease {
+            background-color: #e53935;
+        }
+        #decrease:hover {
+            background-color: #c62828;
+            transform: scale(1.05);
+        }
+        #reset {
+            background-color: #ffc107;
+            color: #333;
+        }
+        #reset:hover {
+            background-color: #ffa000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-heading">
+        <div class="counter-head">
+            <h1>Counter Program</h1>
+            <input type="number" id="value_display" value="0">
+            <button id="increase">Increase</button>
+            <button id="reset">reset</button>
+            <button id="decrease">Decrease</button>
+        </div>
+    </div>
+
+    <script>
+        let inc = document.getElementById('increase')
+        let res = document.getElementById('reset')
+        let dec = document.getElementById('decrease')
+        let value_display = document.getElementById('value_display')
+
+        var value = value_display.value
+
+        inc.onclick=function(){
+            value++
+            value_display.value = value
+        }
+
+        dec.onclick=function(){
+            if (value>0){
+            value--
+            value_display.value=value
+        }
+    }
+
+        res.onclick=function(){
+            value=0
+            value_display.value=value
+        }
+    </script>
+</body>
+</html>

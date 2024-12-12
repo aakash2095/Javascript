@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter Program</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: rgb(186, 192, 238);">
     <div class="counter-heading">
         <div class="counter-head">
-            <h1>Counter Program</h1>
-            <input type="number" id="value_display" value="0">
-            <button id="increase">Increase</button>
-            <button id="reset">reset</button>
-            <button id="decrease">Decrease</button>
+            <h1 style="text-align: center;">COUNTER PROGRAM</h1>
+            <hr><hr>
+            <div class="div border bg-light p-1 m-5">
+                <div class="class" style=" display: flex; justify-content: center; align-items: center; height: 50vh;">
+                    <input type="number" id="value_display" class="form-control text-center d-flex " style="width: 70px; font-size: 1.0rem;" value="0" readonly>
+                    <button id="increase" class="btn btn-dark" style="margin-left: 20px;">Increase</button>
+                    <button id="reset" class="btn btn-danger" style="margin-left: 10px;">reset</button>
+                    <button id="decrease" class="btn btn-dark" style="margin-left: 10px;">Decrease</button>
+                </div>
+            </div>
         </div>
     </div>
-
+        
     <script>
         
         let inc = document.getElementById('increase')
@@ -42,5 +48,9 @@
             value_display.value=value
         }
     </script>
+
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
