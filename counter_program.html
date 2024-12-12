@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+</head>
+<body>
+    <div class="counter-heading">
+        <div class="counter-head">
+            <h1>Counter Program</h1>
+            <input type="number" id="value_display" value="0">
+            <button id="increase">Increase</button>
+            <button id="reset">reset</button>
+            <button id="decrease">Decrease</button>
+        </div>
+    </div>
+
+    <script>
+        
+        let inc = document.getElementById('increase')
+        let res = document.getElementById('reset')
+        let dec = document.getElementById('decrease')
+        let value_display = document.getElementById('value_display')
+
+        var value = value_display.value
+
+        inc.onclick=function(){
+            value++
+            value_display.value = value
+        }
+
+        dec.onclick=function(){
+            if (value>0){
+            value--
+            value_display.value=value
+        }
+    }
+
+        res.onclick=function(){
+            value=0
+            value_display.value=value
+        }
+    </script>
+</body>
+</html>

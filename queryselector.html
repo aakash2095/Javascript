@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementById</title>
+    </head>
+    <body>
+        <h1>getElementById</h1>
+
+        <h1 class="frog">Many frogs glow in blue light, and it may be a secret,
+            eerie language</h1>
+        <p id="para">A survey of hundreds of frogs in South America shows
+            that far more frogs are
+            biofluorescent than previously thought,<q>researchers report in a
+                preprint </q>posted
+            July 28 at bioRxiv.org. <q>ghostly colors may have a role in the
+                frogs</q> communication
+            with members of the same species, the scientists say.
+        </p>
+
+        <p class="frog para">This is some regular text outside the
+            blockquote.</p>
+
+        <p id="frog">This is some regular text outside the blockquote.</p>
+
+        <p class="frog para">This is some regular text outside the
+            blockquote.</p>
+
+        <script>
+
+        // Id Selector
+        var result = document.querySelector('#frog,#para')
+
+        //class selector
+        var result1 = document.querySelector('.para,.frog')
+
+        //Element selector
+        var result2 = document.querySelector("h1,p")
+
+        document.write(result)
+        document.write(result1)
+
+        console.log(result)
+        console.log(result1)
+        console.log(result2)
+
+
+  </script>
+    </body>
+</html>
