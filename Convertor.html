@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertor</title>
+</head>
+<body>
+    
+<div class="head">
+    <h1>Convertor</h1>
+</div>
+<div class="convertor">
+    <input type="number" id="display_number" value="0">
+
+    <input type="radio" name="convert" id="km_to_m">
+    <label for="km_to_m">Kilometer to Meter </label>
+
+    <input type="radio" name="convert" id="M_to_cm">
+    <label for="M_to_cm">Meter to Centimeter </label>
+
+    <button onclick="convert()">Convert</button>
+</div>
+
+<div class="result">
+    <h1 id="display_head"></h1>
+</div>
+
+<script>
+    
+    let result = document.getElementById('display_head')
+    let km_to_m = document.getElementById('km_to_m') 
+    let M_to_cm = document.getElementById('M_to_cm')
+    let display_value = document.getElementById('display_number')
+
+function convert() {
+    if(display_value.value>0){
+        if (km_to_m.checked) {
+            let values = display_value.value * 1000
+            result.innerHTML = values
+        }
+
+        if (M_to_cm.checked) {
+            let values = display_value.value * 100
+            result.innerHTML = values
+        }
+    }
+
+    else {
+        result.innerHTML="Please Enter a Valid Number"
+    }
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
