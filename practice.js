@@ -274,35 +274,43 @@ Fetch(url) ==> Response(promise) ==> Resoponse.json()(promise) ==> result
 
 /////////////////////////////////////////////////////////////////////////
 
-const api = 'https://api.github.com/users/aakash2095'
-async function fetchProfile(url) {
-  const response = await fetch(url);
-  console.log(response);
-  if (!response.ok) {
-    throw new Error("Failed Network Call");
-  }
-  const Data = await response.json();
-  return Data
-}
-async function dispayProfile() {
-  try {
-    const profileResponse = await fetchProfile(api);
-    createProfile(profileResponse)
-  } catch (error) {
-    const profileDiv = document.getElementById('profile').innerText(error.message);
-  }
-}
-function createProfile(data) {
-  const profileDiv = document.getElementById('profile')
-  const avatar = document.createElement('img')
-  avatar.src = data.avatar_url;
-  avatar.alt = `${data.login}'s Avatar`;
-  avatar.style.width = "150px";
-  avatar.style.height = "150px";
-  avatar.style.borderRadius = "50%"
+// const api = 'https://api.github.com/users/aakash2095'
+// async function fetchProfile(url) {
+//   const response = await fetch(url);
+//   console.log(response);
+//   if (!response.ok) {
+//     throw new Error("Failed Network Call");
+//   }
+//   const Data = await response.json();
+//   return Data
+// }
+// async function dispayProfile() {
+//   try {
+//     const profileResponse = await fetchProfile(api);
+//     createProfile(profileResponse)
+//   } catch (error) {
+//     const profileDiv = document.getElementById('profile').innerText(error.message);
+//   }
+// }
+// function createProfile(data) {
+//   const profileDiv = document.getElementById('profile')
+//   const avatar = document.createElement('img')
+//   avatar.src = data.avatar_url;
+//   avatar.alt = `${data.login}'s Avatar`;
+//   avatar.style.width = "150px";
+//   avatar.style.height = "150px";
+//   avatar.style.borderRadius = "50%"
 
-  profileDiv.appendChild(avatar)
+//   profileDiv.appendChild(avatar)
+// }
+
+
+// dispayProfile();
+
+
+
+const api='https://api.exchangerate-api.com/v4/latest/USD'
+async function fetchcurrency(url) {
+  
+  const response = await fetch(url)
 }
-
-
-dispayProfile();
