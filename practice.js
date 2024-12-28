@@ -309,8 +309,60 @@ Fetch(url) ==> Response(promise) ==> Resoponse.json()(promise) ==> result
 
 
 
-const api='https://api.exchangerate-api.com/v4/latest/USD'
-async function fetchcurrency(url) {
+// const api='https://api.exchangerate-api.com/v4/latest/USD'
+// async function fetchcurrency(url) {
   
-  const response = await fetch(url)
+//   const response = await fetch(url)
+//   if (!response.ok) {
+//       throw new Error("Failed Network Call");
+//       }
+//       const Data = await response.json();
+//       return Data
+// }
+
+
+// async function displaycurrency() {
+//   try {
+//         const profileResponse = await fetchcurrency(api);
+//         currencyfrom(profileResponse)
+//       } catch (error) {
+//         const currencydiv = document.getElementById('currency').innerText(error.message);
+//       }
+//     }
+
+
+
+
+const api = 'https://api.exchangerate-api.com/v4/latest/USD';
+
+async function fetchCurrencies() {
+  try {
+    const response = await fetch(api);
+    const data = await response.json();
+
+    const listContainer = document.getElementById('currency-list');
+    listContainer.innerHTML = ''; 
+
+   
+    for (const currency in data.rates) {
+      const listItem = document.createElement('li');
+      listItem.textContent = currency;
+      listContainer.appendChild(listItem);
+    }
+  } catch (error) {
+    const listContainer = document.getElementById('currency-list');
+    listContainer.innerHTML = '<li>Error loading currencies</li>';
+    console.error('Error:', error);
+  }
 }
+
+fetchCurrencies();
+
+console.log(false || 0 || undefined);  //if all are falsy it reuten last value 
+
+console.log(false || 'Akahs' || 'hello');//or return first truthy values on encounter 
+
+console.log('Hello' && 0 && 'Darshan'); // && returns the first falsy value when encounter 
+
+let is_logged = true;
+is_logged && console.log('hello') //hello
