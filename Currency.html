@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  
+  <style>
+    /* Reset some default browser styles */
+    body, h1, h2, input, select, button {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the body */
+    body {
+      background-color: #e1f9c6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    /* Style the container box */
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box; /* Makes sure padding is inside the box */
+      text-align: center;
+    }
+
+    /* Style the heading */
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    /* Style the input and select elements */
+    input, select {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    }
+
+    /* Style the button */
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the result text */
+    #result {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Currency Converter</h1>
+    
+    <input type="number" id="amount" placeholder="Enter amount" />
+
+    <select id="from-currency"></select>
+
+    <select id="to-currency"></select>
+
+    <button onclick="convertCurrency()">Convert</button>
+    
+    <h2 id="result"></h2>
+  </div>
+
+  <script src="currency.js"></script>
+</body>
+</html>

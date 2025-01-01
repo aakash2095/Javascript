@@ -358,11 +358,11 @@ async function fetchCurrencies() {
 
 fetchCurrencies();
 
-console.log(false || 0 || undefined);  //if all are falsy it reuten last value 
+// console.log(false || 0 || undefined);  //if all are falsy it reuten last value 
 
-console.log(false || 'Akahs' || 'hello');//or return first truthy values on encounter 
+// console.log(false || 'Akahs' || 'hello');//or return first truthy values on encounter 
 
-console.log('Hello' && 0 && 'Darshan'); // && returns the first falsy value when encounter 
+// console.log('Hello' && 0 && 'Darshan'); // && returns the first falsy value when encounter 
 
-let is_logged = true;
-is_logged && console.log('hello') //hello
+// let is_logged = true;
+// is_logged && console.log('hello') //hello
